@@ -1,5 +1,4 @@
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#pragma once
 
 #include <QWidget>
 
@@ -11,8 +10,7 @@ class MainWindow : public QWidget
 
 public:
 	MainWindow( QWidget * parent = nullptr );
-
+private:
 
 };
 
-#endif // MAINWINDOW_H

@@ -4,6 +4,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QTabWidget>
+#include <QFont>
 
 
 
@@ -13,11 +14,13 @@ MainWindow::MainWindow( QWidget * parent )
 	QHBoxLayout * lineEditLayout = new QHBoxLayout;
 	lineEditLayout->setAlignment( Qt::AlignLeft );
 
-	QLabel * label = new QLabel( tr( "Text" ) );
+	QLabel * label = new QLabel( tr( "Enter path" ) );
+	label->setFont( QFont( "times" ) );
 	QLineEdit * lineEdit = new QLineEdit;
 	lineEdit->setFixedWidth( 400 );
 	lineEdit->setFixedHeight( 50 );
-	//lineEdit->setFont(
+	lineEdit->setFont( QFont( "times", 10, 20 ) );
+	lineEdit->setTextMargins( 7, 5, 5, 5 );
 
 	lineEditLayout->addWidget( label );
 	lineEditLayout->addWidget( lineEdit );

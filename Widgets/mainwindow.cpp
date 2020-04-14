@@ -8,7 +8,7 @@
 
 
 
-MainWindow::MainWindow( QWidget * parent )
+Widgets::MainWindow::MainWindow( QWidget * parent )
 	: QWidget( parent )
 {
 	QHBoxLayout * lineEditLayout = new QHBoxLayout;

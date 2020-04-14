@@ -1,0 +1,4 @@
+#ifndef TEXTFILEVIEWER_H
+#define TEXTFILEVIEWER_H
+
+#endif // TEXTFILEVIEWER_H

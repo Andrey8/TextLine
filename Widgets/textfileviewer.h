@@ -1,4 +1,13 @@
-#ifndef TEXTFILEVIEWER_H
-#define TEXTFILEVIEWER_H
+#pragma once
 
-#endif // TEXTFILEVIEWER_H
+#include <QTextEdit>
+
+
+
+namespace Widgets
+{
+	class TextFileViewer : public QTextEdit
+	{
+
+	};
+}

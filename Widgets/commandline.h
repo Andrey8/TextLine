@@ -1,4 +1,14 @@
-#ifndef COMMANDLINE_H
-#define COMMANDLINE_H
+#pragma once
 
-#endif // COMMANDLINE_H
+#include <QLineEdit>
+
+
+
+namespace Widgets
+{
+	class CommandLine : public QLineEdit
+	{
+
+	};
+}
+

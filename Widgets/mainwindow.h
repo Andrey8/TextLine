@@ -2,6 +2,12 @@
 
 #include <QWidget>
 
+namespace Widgets { class CommandLine; }
+namespace Widgets { class TextFileViewer; }
+
+class QLabel;
+class QTabWidget;
+
 
 
 namespace Widgets
@@ -13,9 +19,16 @@ namespace Widgets
 	public:
 		MainWindow( QWidget * parent = nullptr );
 	private:
+		Widgets::CommandLine * m_commandLine;
+		QLabel * m_label;
 
+		//Widgets::TextFileViewer * m_fileViewer;
+		QTabWidget * m_tabWidget;
+
+		void CreateWidgets();
+		void CreateAndSetLayouts();
+		void SetGeometry();
 	};
-
 }
 
 

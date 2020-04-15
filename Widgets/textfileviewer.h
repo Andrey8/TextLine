@@ -8,6 +8,13 @@ namespace Widgets
 {
 	class TextFileViewer : public QTextEdit
 	{
+	public:
+		TextFileViewer()
+		{
+
+		}
+
+	private:
 
 	};
 }

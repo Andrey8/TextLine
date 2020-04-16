@@ -21,7 +21,7 @@ Widgets::MainWindow::MainWindow( QWidget * parent )
 
 void Widgets::MainWindow::CreateWidgets()
 {
-	m_label = new QLabel( tr( "Enter path" ) );
+	m_label = new QLabel( tr( "  Enter" ) );
 	m_label->setFont( QFont( "times" ) );
 
 	m_commandLine = new CommandLine();

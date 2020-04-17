@@ -7,6 +7,8 @@
 #include <QLineEdit>
 #include <QTabWidget>
 #include <QFont>
+#include <QMenuBar>
+#include <QMenu>
 
 
 
@@ -30,6 +32,10 @@ void Widgets::MainWindow::CreateWidgets()
 	m_commandLine->setFont( QFont( "times", 10, 20 ) );
 	m_commandLine->setTextMargins( 7, 5, 5, 5 );
 
+	m_menuBar = new QMenuBar();
+	m_settingsMenu = m_menuBar->addMenu( tr( "Settings" ) );
+	// add action
+
 	m_tabWidget = new QTabWidget();
 	QWidget * page1 = new TextFileViewer();
 	//QWidget * page2 = new QWidget;
@@ -47,10 +53,13 @@ void Widgets::MainWindow::CreateAndSetLayouts()
 	commandLineLayout->addWidget( m_label );
 	commandLineLayout->addWidget( m_commandLine );
 	commandLineLayout->setSpacing( 20 );
+	commandLineLayout->addStretch( 100 );
+	commandLineLayout->addWidget( m_menuBar );
 	commandLineLayout->addStretch( 200 );
 
 	QVBoxLayout * vLayout = new QVBoxLayout;
 	vLayout->setAlignment( Qt::AlignTop );
+
 	vLayout->addLayout( commandLineLayout );
 	vLayout->addWidget( m_tabWidget );
 
@@ -59,9 +68,9 @@ void Widgets::MainWindow::CreateAndSetLayouts()
 
 void Widgets::MainWindow::SetGeometry()
 {
-	setMinimumWidth( 500 );
+	setMinimumWidth( 600 );
 	setMinimumHeight( 400 );
-	setGeometry( QRect( 50 , 100, 700, 600 ) );
+	setGeometry( QRect( 50 , 100, 900, 600 ) );
 }
 
 

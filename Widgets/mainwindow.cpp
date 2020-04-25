@@ -2,6 +2,9 @@
 #include "commandline.h"
 #include "textfileviewer.h"
 
+#include "FilesViewing/viewmanager.h"
+#include "FilesViewing/objects.h"
+
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -19,6 +22,7 @@ Widgets::MainWindow::MainWindow( QWidget * parent )
 	CreateAndSetLayouts();
 
 	SetGeometry();
+	SetConnections();
 }
 
 void Widgets::MainWindow::CreateWidgets()
@@ -73,6 +77,13 @@ void Widgets::MainWindow::SetGeometry()
 	setGeometry( QRect( 50 , 100, 900, 600 ) );
 }
 
+void Widgets::MainWindow::SetConnections()
+{
+	connect( m_commandLine,
+			 SIGNAL( returnPressed() ),
+			 &FViewing::Objects::GetViewManager(),
+			 SLOT( ViewFile() ) );
 
+}
 
 

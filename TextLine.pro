@@ -25,9 +25,13 @@ DEFINES += QT_DEPRECATED_WARNINGS
 HEADERS += \
     Widgets/mainwindow.h \
     Widgets/commandline.h \
-    Widgets/textfileviewer.h
+    Widgets/textfileviewer.h \
+    FilesViewing/viewmanager.h \
+    FilesViewing/objects.h
 
 SOURCES += \
     Widgets/mainwindow.cpp \
-    main.cpp
+    main.cpp \
+    FilesViewing/objects.cpp \
+    FilesViewing/viewmanager.cpp
 

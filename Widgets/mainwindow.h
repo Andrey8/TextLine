@@ -32,6 +32,7 @@ namespace Widgets
 		void CreateWidgets();
 		void CreateAndSetLayouts();
 		void SetGeometry();
+		void SetConnections();
 	};
 }
 

@@ -3,6 +3,7 @@
 #include "textfileviewer.h"
 
 #include "FilesViewing/viewmanager.h"
+#include "FilesViewing/clobserver.h"
 #include "FilesViewing/objects.h"
 
 #include <QHBoxLayout>
@@ -83,6 +84,10 @@ void Widgets::MainWindow::SetConnections()
 			 SIGNAL( returnPressed() ),
 			 &FViewing::Objects::GetViewManager(),
 			 SLOT( ViewFile() ) );
+	connect( m_commandLine,
+			 SIGNAL( textEdited( QString const & ) ),
+			 FViewing::Objects::GetViewManager().GetCLObserver(),
+			 SLOT( SetText( QString const & ) ) );
 
 }
 

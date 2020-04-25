@@ -27,7 +27,8 @@ HEADERS += \
     Widgets/commandline.h \
     Widgets/textfileviewer.h \
     FilesViewing/viewmanager.h \
-    FilesViewing/objects.h
+    FilesViewing/objects.h \
+    FilesViewing/clobserver.h
 
 SOURCES += \
     Widgets/mainwindow.cpp \

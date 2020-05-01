@@ -28,7 +28,8 @@ HEADERS += \
     Widgets/textfileviewer.h \
     FilesViewing/viewmanager.h \
     FilesViewing/objects.h \
-    FilesViewing/clobserver.h
+    FilesViewing/clobserver.h \
+    Base/clrequest.h
 
 SOURCES += \
     Widgets/mainwindow.cpp \
